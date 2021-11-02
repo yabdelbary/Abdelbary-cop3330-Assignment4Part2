@@ -1,0 +1,60 @@
+/*
+ *  UCF COP3330 Fall 2021 Assignment 4 Solution
+ *  Copyright 2021 Yussef Abdelbary
+ */
+
+
+
+@startuml
+
+
+
+
+class toDoList{
++toDoList()
++addItem(current item)
++removeItem(current item)
++incompletedItems()
++completedItems()
++formatDate(string currentDate)
++checkExist(String destination)
++saveToFile(File "")
++loadToDoList(File "")
+
+}
+
+class item{
+-int status;
+-String listName;
+-String dueDate;
+-String description;
++getStatus()
++setStatus(checkBox)
++getDate(currentDate)
++setDate(localDate)
++getDescription()
++setDescription(String)
++getName()
++setName(String)
+}
+
+class helloController{
++listOfLists()
+-findList(listName)
++removeList(listName)
++addListItem(listName, listItem)
++removeListItem(listName, listItem)
++editListTitle(String , newName)
++editListItemDueDate(listName , listItem , New dueDate)
++editListItemDescription(listName, listItem, description)
++displayListAllItems(listName)
++displayListIncompletedElements(listName)
++displayListCompletedElements(listName)
++markListItemCompleted(listName, listItem)
++saveAllLists()
++listSaveList()
++listLoadSingleList()
++listLoadMultipleLists()
+}
+
+@enduml
